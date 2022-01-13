@@ -1,0 +1,213 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Vizola!</title>
+	<style>
+		html{
+			font-size: 20px;
+		}
+		body{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			font-family: 'Corbel';
+			transition: background 1s ease-out;
+			width: 100vw;
+			color: #fff;
+			transition: all 1s;
+		}
+
+		::-webkit-scrollbar{
+			position: absolute;
+			display: none;
+		}
+
+		a{
+			padding: 5px;
+			color: #dff;
+			text-decoration: none;
+			font-weight: bolder;
+		}
+
+		a:hover{
+			color: #99f;
+			text-shadow: 0 0 10px #fff;
+		}
+
+		.button{
+			padding: 5px;
+			background: #bbf;
+			border: 2px solid #fff;
+			border-radius: 6px;
+			box-shadow: 5px 5px 0 #252525, 10px 10px 0 #fff;
+			transition: all .5s;
+		}
+
+		.button:active{
+			transform: translate(5px, 5px);
+			box-shadow: none;
+		}
+
+		.intro{
+			overflow: hidden;
+			height: 100vh;
+			font-size: 3rem;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.intro div p{
+			color: #252525;
+			animation: introAnimate 5s;
+		}
+
+		@keyframes introAnimate {
+			from{
+				font-size: 2rem;
+			}
+			to{	
+				color: #fff;
+				font-size: 200rem;
+			}
+		}
+
+		.main-content{
+			display: none;
+			margin: 20px;
+		}
+
+		.main-content div.nav{
+			margin-top: 25px;
+			height: 150px;
+			display: flex;
+			align-items: center;
+			justify-content: space-around;
+			padding: 20px 0;
+			border-left: 10px solid #fff;
+			border-right: 10px solid #fff;
+			border-radius: 10px;
+		}
+
+		.nav div.logo{
+			position: relative;
+			font-size: 2rem;
+			color: #fff;
+			font-weight: bolder;
+		}
+		.nav div.logo::before{
+			content: " ";
+			position: absolute;
+			left: -70px;
+			top: 50%;
+			width: 60px;
+			height: 3px;
+			background: linear-gradient(to left, #fff, #333);
+		}
+		.nav div.logo::after{
+			content: " ";
+			position: absolute;
+			right: -70px;
+			top: 50%;
+			width: 60px;
+			height: 3px;
+			background: linear-gradient(to right, #fff, #333);
+		}
+
+		.main-content div.section{
+			margin-top: 50px;
+			width: 100%;
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: space-around;
+		}
+
+		.section div.card{
+			width: 60%;
+			padding: 10px;
+			text-align: center;
+			font-size: 1rem;
+		}
+		
+		.section div.card p{
+			font-size: 1.2rem;
+		}
+
+		@media (max-width: 768px) {
+			.main-content div.nav{
+				flex-direction: column;
+			}
+		}
+
+		@media (max-width: 1100px) {
+			.section div.card{
+				flex-basis: 100%;
+				/*width: 100px;*/
+			}
+		}
+	</style>
+</head>
+<body>
+
+	<div class="intro">
+		<div class="introText">
+			<p>Vizola</p>
+		</div>
+	</div>
+
+	<div class="main-content">
+		<div class="nav">
+			<div><a href="#">VISION</a></div>
+			<div class="logo">VIZOLA</div>
+			<div><a href="#">ABOUT US</a></div>
+		</div>
+
+		<div class="section">
+			<div class="card">
+				<h2 class="button">
+					<a href="main.html">Solar System</a>
+				</h2>
+				<img width="80%" src="https://media.wired.com/photos/5934776af061de0423ccdf98/191:100/pass/solar_system.jpg" alt="">
+				<p>Expand your knowledge by interacting with the 3 Dimensional model of Solar System and explore various planets</p>
+			</div>
+			<hr width="65%">
+			<div class="card">
+				<h2 class="button">
+					<a href="#">Four Stroke Engine</a>
+				</h2>
+				<img width="80%" src="http://shaikmoin.files.wordpress.com/2013/02/four-stroke-cycle.png" alt="">
+				<p>Lorem ipsum dolor, sit, amet consectetur adipisicing elit. Qui, ad.</p>
+			</div>
+			<hr width="65%">
+			<div class="card">
+				<h2 class="button">
+					<a href="#">Harmonic Motion</a>
+				</h2>
+				<img width="80%" src="https://i.ytimg.com/vi/JSBw-JyFgZk/maxresdefault.jpg" alt="">
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, consectetur.</p>
+			</div>
+		</div>
+
+	</div>
+
+	<script type="text/javascript">
+		introTag = document.querySelector('.intro');
+	introAni = document.querySelector('span.introAni');
+	mainContent = document.querySelector('.main-content');
+	// document.body.style.background = '#252525';
+
+	setTimeout( () => {
+		document.body.style.background = '#252525';
+		introTag.style.display = 'none';
+		mainContent.style.display = 'block';
+		} , 2500);
+
+		
+		
+
+	// console.log(introAni.innerHTML);
+	</script>
+</body>
+</html>
